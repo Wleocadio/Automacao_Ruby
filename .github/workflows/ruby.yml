@@ -28,9 +28,10 @@ jobs:
     - name: Install bundler
       run: gem install bundler
 
-    - name: Install dependencies
+    - name: Install 
       run:
-          bundler install 
+          gem install capybara chromedriver-helper cucumber rspec selenium-webdriver site_prism pry
+      
 
     - name: Execute test
       run:
