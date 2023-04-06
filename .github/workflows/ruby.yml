@@ -17,13 +17,15 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+         with:
+      chrome-version: beta
+    id: setup-chrome
+     - run: |
+      echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+      chrome --version
 
     - name: Instalação do Google Chrome
-      run: sudo apt-get update && sudo apt-get install google-chrome-stable
-
-    - name: Install Selenium
-      run: sudo gem install selenium-webdriver
-        
+      run: sudo apt-get update && sudo apt-get install google-chrome-stable  
 
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
@@ -44,5 +46,5 @@ jobs:
 
     - name: Execute test
       run:
-          bundler exec cucumber --remote-debugging-port=9222
+          bundler exec cucumber 
 
