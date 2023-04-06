@@ -20,7 +20,7 @@ jobs:
          with:
       chrome-version: beta
     id: setup-chrome
-     - run: |
+     - run: 
       echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
       chrome --version
 
