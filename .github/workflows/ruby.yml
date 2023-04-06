@@ -17,9 +17,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
-    - name: Instalação do Google Chrome
-      run: sudo apt-get update && sudo apt-get install google-chrome-stable       
+   
 
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
@@ -30,6 +28,12 @@ jobs:
         ruby-version: 2.7
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       
+    - name: Install Chromium
+      run: 
+           sudo apt-get update
+           sudo apt-get install -y ruby
+           sudo apt-get install -y chromium-browser
+
     - name: Install bundler
       run: gem install bundler
 
