@@ -24,6 +24,7 @@ jobs:
     - name: Instalação do chrome-driver
       run: wget http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip
       run: unzip chromedriver_linux64.zip
+      
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
