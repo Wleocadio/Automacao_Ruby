@@ -1,7 +1,7 @@
 #language: pt
 
-@regrecao
-Funcionalidade: Validar pagina Home Page
+@regression_menu
+Funcionalidade: Validar Menu Page
 
 Contexto:
 Dado que eu esteja na pagina home
