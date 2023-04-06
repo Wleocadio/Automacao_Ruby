@@ -44,5 +44,5 @@ jobs:
 
     - name: Execute test
       run:
-          bundler exec cucumber
+          bundler exec cucumber --remote-debugging-port=9222
 
