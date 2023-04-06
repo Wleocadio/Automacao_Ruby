@@ -30,7 +30,7 @@ jobs:
 
     - name: Install dependencies
       run:
-          bundler install
+          bundler install 
 
     - name: Execute test
       run:
