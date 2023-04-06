@@ -23,7 +23,7 @@ jobs:
 
     - name: Instalação do chrome-driver
       run: wget http://chromedriver.storage.googleapis.com/2.23/chromedriver_linux64.zip
-      
+
     - name: Unzip do chrome-driver
       run: unzip chromedriver_linux64.zip
 
@@ -39,9 +39,9 @@ jobs:
     - name: Install bundler
       run: gem install bundler
 
-    - name: Install 
+    - name: Install dependencies
       run:
-          gem install capybara chromedriver-helper cucumber rspec selenium-webdriver site_prism pry
+          gem install capybara cucumber rspec selenium-webdriver site_prism pry
       
 
     - name: Execute test
