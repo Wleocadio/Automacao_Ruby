@@ -6,13 +6,12 @@ Quando('eu clico no botão Sobre Nós') do
     div_id = "sobre-nos"
     menu.valida_tela_visivel(div_id)
     menu.button_sobre_nos
-end
+    end
   
 Então('sou direcionado para a sessão Sobre Nós') do 
     div_id = "sobre-nos"
     menu.valida_teste(div_id)
 end
-
 
 #validar botao depoimentos
 Quando('eu clico no botão Depoimentos') do 
