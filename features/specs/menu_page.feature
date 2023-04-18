@@ -1,7 +1,7 @@
 #language: pt
 
 @regression_menu
-Funcionalidade: Validar Menu Page
+Funcionalidade: Menu Page
 
 Contexto:
 Dado que eu esteja na pagina home

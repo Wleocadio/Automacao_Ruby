@@ -2,7 +2,7 @@ class Menu < SitePrism::Page
     include RSpec::Matchers
     include Capybara::DSL
 
-    element :title_sobre_nos, :xpath, 'div[id="sobre-nos"]'
+    element :title_sobre_nos, 'div[id="sobre-nos"]'
     element :btn_sobre_nos, 'a[href="/#sobre-nos"]'
     element :title_sobre_nos, './/h3[contains(text(),"Sobre nós")]'
     
@@ -38,12 +38,13 @@ class Menu < SitePrism::Page
     end
     
     def valida_tela_visivel(div_id)
-        expect(page).to have_css("div[id='#{div_id}']", visible: false)
+        expect(page).to have_selector("div[id='#{div_id}']", visible: false)
     end
 
     def valida_teste(div_id)
-        sleep 3
-        expect(page).to have_css("div[id='#{div_id}']", visible: true)
+        sleep(0.5)
+        expect(page).to have_selector("div[id='#{div_id}']", visible: true)
+        
     end
 
 
