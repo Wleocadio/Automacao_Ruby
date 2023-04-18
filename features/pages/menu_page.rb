@@ -42,7 +42,7 @@ class Menu < SitePrism::Page
     end
 
     def valida_teste(div_id)
-        sleep(1)
+        sleep(0.6)
         expect(page).to have_selector("div[id='#{div_id}']", visible: true)
         
     end
