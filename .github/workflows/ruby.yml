@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  wordkflow_dispatch:
+  permissions:
+    contents: read
 
 jobs:
   test:
