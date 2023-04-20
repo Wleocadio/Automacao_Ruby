@@ -52,3 +52,7 @@ O comando deve retornar a versão do Bundler instalada.
 
 `bundler exec cucumber`
 
+2. Execute o comando abaixo no Prompt de comando para iniciar a automação em headless
+
+`bundler exec cucumber -p ci`
+
