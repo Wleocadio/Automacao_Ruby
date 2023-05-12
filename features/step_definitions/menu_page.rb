@@ -48,3 +48,23 @@ Então('sou direcionado para a sessão Fale Conosco') do
     div_id = "faleConosco"
     menu.valida_teste(div_id)
 end
+
+
+Quando('eu clico no botão {string}') do |string|
+    menu.valida_box(string)
+    
+end
+
+Então('é aberto uma caixa de texto com descrevendo a {string} da empresa') do |string|
+    expect(page).to have_css('span', :text => string, :visible => true)
+    sleep 1
+end
+
+Quando('eu clico no {string} do Parceiro') do |string|
+    menu.valida_parceiros(string)
+end
+  
+Então('sou direcionado para a {string} do Parceiro') do |string|
+    expect(page).to have_current_path(string, url: true)
+    sleep 1
+end

@@ -106,7 +106,7 @@ DEPENDENCIES
   cucumber
   pry
   rspec
-  selenium-webdriver
+  selenium-webdriver (= 4.8.6)
   site_prism
 
 BUNDLED WITH

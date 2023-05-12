@@ -38,16 +38,23 @@ class Menu < SitePrism::Page
     end
     
     def valida_tela_visivel(div_id)
-        expect(page).to have_selector("div[id='#{div_id}']", visible: false)
+        expect(page).to have_selector("[id='#{div_id}']", visible: false)
     end
 
     def valida_teste(div_id)
         sleep(0.6)
-        expect(page).to have_selector("div[id='#{div_id}']", visible: true)
+        expect(page).to have_selector("[id='#{div_id}']", visible: true)
         
     end
 
+    def valida_box(string)
+        find('h4', :text => string).hover().click
+    end
 
+    def valida_parceiros(string)
+        find("[alt='#{string}']").click
+        
+    end
 
     
 end
